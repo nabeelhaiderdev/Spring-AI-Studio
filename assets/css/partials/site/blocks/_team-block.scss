@@ -28,13 +28,13 @@
 
 	.member-name {
 
-		@include font(axi, bold);
+		@include font(itc, bold);
 		margin-bottom: 8px;
 	}
 
 	.designation {
 
-		@include font(axi, reg);
+		@include font(itc, reg);
 
 		font-size: 18px;
 		margin-bottom: 0;
@@ -173,15 +173,14 @@
 
 	.member-name-popup {
 
-		@include font(axi, bold);
-
+		@include font(itc, bold);
 		color: map-get($map: $colors, $key: dark_text);
 		margin-bottom: 5px;
 	}
 
 	.member-designation {
 
-		@include font(pn, reg);
+		@include font(itc, reg);
 
 		color: map-get($map: $colors, $key: l_gblack);
 		margin-bottom: 0;

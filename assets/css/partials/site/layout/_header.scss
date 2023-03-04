@@ -14,94 +14,49 @@ input[type="submit"],
 header {
 
 	@include transition(all, 0.3s, ease-in-out);
-
 	outline: 0;
-}
-
-.top-bar {
-	padding: 10px 0;
-	background-color: map-get($map: $colors, $key: primary_color);
-	color: map-get($map: $colors, $key:white);
-
 }
 
 .nav-container {
 	display: flex;
 	align-items: center;
-	margin-top: 8px;
 }
 
-.header-logo a {
-	display: inline-block;
-}
 
 .no-overflow {
 	overflow: hidden;
 }
 
-.logo {
+.header-logo {
 	position: relative;
 	z-index: 9;
 	line-height: 0.65;
 	width: 230px;
 	transition: all 0.2s ease-in-out;
 
-	a {
-		margin-top: 3px;
+	a,
+	a:visited {
 		display: block;
-		transform: scale(1);
-		transform-origin: left top;
 	}
 }
 
 .header-inner {
-	padding: 20px 0;
+	padding: 16px 50px;
 	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
 	@include transition(all, 0.3s, ease-in-out);
 }
 
 header {
-	background-color: map-get($map: $base_colors, $key: header_fixed_bg_color);
 	z-index: 9;
 	width: 100%;
 	position: fixed;
 	top: 0;
-
-	&.shrink {
-
-		.logo {
-
-			a {
-				transform: scale(0.95);
-			}
-		}
-
-		.top-bar {
-			display: none;
-		}
-
-		.header-inner {
-			padding: 13px 0;
-		}
-	}
 }
 
-
-.header-wrapper {
-	box-sizing: border-box;
-	width: 90%;
-	max-width: 1300px;
-	margin: 0 auto;
-}
-
-
-.header-btns {
-	margin-top: 0;
-	z-index: 1;
-	display: flex;
-	align-items: center;
-}
 
 body.logged-in.admin-bar {
 

@@ -272,11 +272,11 @@ h5,
 .heading-5,
 h6,
 .heading-6 {
-  font-family: "Axiforma-Bold", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0 0 20px;
-  color: #14191f;
+  color: var(--color-primary-500);
   line-height: 1.1;
   text-transform: initial;
 }
@@ -492,12 +492,14 @@ video {
 >> Edit these styles as required
 ------------------------------------------------- */
 body {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
   position: relative;
   font-size: 16px;
-  color: #303336;
+  color: var(--color-base-drgrey);
   line-height: 1.5;
+  background-color: var(--color-primary-100);
 }
 
 p {
@@ -505,21 +507,13 @@ p {
 }
 
 ::-moz-selection {
-  color: #f7f7f7;
-  background-color: #00a4eb;
+  color: var(--color-base--white);
+  background-color: var(--color-primary);
 }
 
 ::selection {
-  color: #f7f7f7;
-  background-color: #00a4eb;
-}
-
-.background {
-  background-repeat: repeat;
-  background-position: right;
-  background-size: contain;
-  height: 300px;
-  width: 200px;
+  color: var(--color-base--white);
+  background-color: var(--color-primary);
 }
 
 /*-------------------------------------------------
@@ -683,7 +677,7 @@ ol ul {
   height: 6px;
   background-position: left top;
   position: absolute;
-  background-color: #00a4eb;
+  background-color: var(--color-secondary-1);
   left: 0;
   top: 9px;
   border-radius: 50%;
@@ -713,8 +707,8 @@ ol ul {
 }
 .page-section ol li::before {
   color: #303336;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   content: counters(list, ".") ".";
   counter-increment: list;
@@ -993,8 +987,8 @@ input[type=string],
 select,
 textarea,
 .gform-text-input-reset {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 18px;
   height: 50px;
@@ -1186,8 +1180,8 @@ input[type=reset] {
   color: #f7f7f7;
   outline: none;
   border: none;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 16px;
   height: 50px;
@@ -1231,11 +1225,11 @@ input[type=reset]:hover {
 [type=checkbox]:checked + span,
 [type=checkbox]:not(:checked) + span {
   position: relative;
-  padding-left: 26px;
+  padding-left: 24px;
+  line-height: 1;
   cursor: pointer;
-  line-height: 20px;
   display: inline-block;
-  color: #303336;
+  color: var(--color-primary-600);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 20px 10px 0;
@@ -1249,10 +1243,10 @@ input[type=reset]:hover {
   position: absolute;
   left: 0;
   top: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #e0e0e0;
-  background-color: #f0f0f0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-primary-200);
+  border-radius: 4px;
 }
 
 [type=checkbox]:checked + label::after,
@@ -1260,15 +1254,20 @@ input[type=reset]:hover {
 [type=checkbox]:checked + span::after,
 [type=checkbox]:not(:checked) + span::after {
   content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #00a4eb;
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-secondary-3);
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  background-repeat: no-repeat;
+  background-image: url(../img/checkbox-icon.svg);
+  background-position: center;
+  background-size: 10px;
 }
 
 [type=checkbox]:not(:checked) + label::after,
@@ -1285,6 +1284,22 @@ input[type=reset]:hover {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
+}
+
+[type=checkbox]:hover + label::after,
+[type=checkbox]:hover + span::after {
+  background-color: var(--color-secondary-3);
+}
+
+.with-rounder-checkboxes [type=checkbox]:checked + label::before,
+.with-rounder-checkboxes [type=checkbox]:not(:checked) + label::before,
+.with-rounder-checkboxes [type=checkbox]:checked + span::before,
+.with-rounder-checkboxes [type=checkbox]:not(:checked) + span::before,
+.with-rounder-checkboxes [type=checkbox]:checked + label::after,
+.with-rounder-checkboxes [type=checkbox]:not(:checked) + label::after,
+.with-rounder-checkboxes [type=checkbox]:checked + span::after,
+.with-rounder-checkboxes [type=checkbox]:not(:checked) + span::after {
+  border-radius: 50%;
 }
 
 /* -------------------------------------------------
@@ -1306,7 +1321,7 @@ input[type=reset]:hover {
 [type=radio]:checked + span,
 [type=radio]:not(:checked) + span {
   position: relative;
-  padding-left: 26px;
+  padding-left: 24px;
   cursor: pointer;
   line-height: 20px;
   display: inline-block;
@@ -1324,11 +1339,10 @@ input[type=reset]:hover {
   position: absolute;
   left: 0;
   top: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #e0e0e0;
-  border-radius: 100%;
-  background-color: #f0f0f0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-primary-200);
+  border-radius: 50%;
 }
 
 [type=radio]:checked + label::after,
@@ -1336,16 +1350,20 @@ input[type=reset]:hover {
 [type=radio]:checked + span::after,
 [type=radio]:not(:checked) + span::after {
   content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #00a4eb;
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-secondary-3);
   position: absolute;
-  top: 4px;
-  left: 4px;
-  border-radius: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  background-repeat: no-repeat;
+  background-image: url(../img/checkbox-icon.svg);
+  background-position: center;
+  background-size: 10px;
 }
 
 [type=radio]:not(:checked) + label::after,
@@ -1992,8 +2010,8 @@ img.gform_ajax_spinner {
   text-align: left;
 }
 .wp-caption p.wp-caption-text {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 18px;
   margin: 0;
@@ -2225,8 +2243,8 @@ a img.aligncenter {
   padding: 6px 12px 7px;
   font-size: 15px;
   line-height: 20px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   margin: 0 5px 10px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -2317,8 +2335,8 @@ a img.aligncenter {
   border-bottom: none;
 }
 .comment-author.vcard span {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -2637,12 +2655,6 @@ header {
   outline: 0;
 }
 
-.top-bar {
-  padding: 10px 0;
-  background-color: #00a4eb;
-  color: #f7f7f7;
-}
-
 .nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2650,18 +2662,13 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 8px;
-}
-
-.header-logo a {
-  display: inline-block;
 }
 
 .no-overflow {
   overflow: hidden;
 }
 
-.logo {
+.header-logo {
   position: relative;
   z-index: 9;
   line-height: 0.65;
@@ -2670,62 +2677,34 @@ header {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.logo a {
-  margin-top: 3px;
+.header-logo a,
+.header-logo a:visited {
   display: block;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  -webkit-transform-origin: left top;
-      -ms-transform-origin: left top;
-          transform-origin: left top;
 }
 
 .header-inner {
-  padding: 20px 0;
+  padding: 16px 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 header {
-  background-color: #e6e6e6;
   z-index: 9;
   width: 100%;
   position: fixed;
   top: 0;
-}
-header.shrink .logo a {
-  -webkit-transform: scale(0.95);
-      -ms-transform: scale(0.95);
-          transform: scale(0.95);
-}
-header.shrink .top-bar {
-  display: none;
-}
-header.shrink .header-inner {
-  padding: 13px 0;
-}
-
-.header-wrapper {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 90%;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.header-btns {
-  margin-top: 0;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 body.logged-in.admin-bar header {
@@ -2772,8 +2751,8 @@ body.logged-in.admin-bar header {
   display: inline-block;
   position: relative;
   line-height: 1;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .header-nav ul li a,
@@ -2785,8 +2764,8 @@ body.logged-in.admin-bar header {
   position: relative;
   color: #14191f;
   font-size: 15px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .header-nav ul li a::after,
@@ -2873,8 +2852,8 @@ body.logged-in.admin-bar header {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .header-nav ul ul li a::after,
@@ -2994,8 +2973,8 @@ body.logged-in.admin-bar header {
 .nav-overlay .header-nav ul ul li a:visited {
     padding: initial;
     text-transform: inherit;
-    font-family: "Axiforma-Regular", arial, sans-serif;
-    font-weight: 400;
+    font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+    font-weight: normal;
     font-style: normal;
   }
   .nav-overlay .header-nav ul ul li.current-menu-item > a, .nav-overlay .header-nav ul ul li.current-menu-parent > a {
@@ -3393,8 +3372,8 @@ body.logged-in.admin-bar header {
   margin-bottom: 0;
   margin-left: 30px;
   font-size: 14px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .legal-nav ul li a,
@@ -3450,8 +3429,8 @@ body.logged-in.admin-bar header {
 .legal-text {
   font-size: 15px;
   color: #f7f7f7;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   margin-right: 30px;
 }
@@ -3899,7 +3878,7 @@ body.logged-in.admin-bar header {
 ****/
 .learn-more {
   color: #000;
-  font-family: "Axiforma-Bold", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -3924,7 +3903,7 @@ span.button {
   text-align: center;
   border-radius: 0;
   line-height: 1.5;
-  font-family: "Axiforma-Bold", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 16px;
@@ -3958,8 +3937,8 @@ a.wp-block-button__link:visited {
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   margin-right: 9px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 16px;
   border-radius: 100px;
@@ -4193,8 +4172,8 @@ a.wp-block-button__link:visited.has-text-color.has-background:hover {
 }
 
 .post-tag a {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   margin-bottom: 8px;
   border-bottom: none;
@@ -4339,8 +4318,8 @@ a.wp-block-button__link:visited.has-text-color.has-background:hover {
   display: block;
   font-size: 24px;
   line-height: 30px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   cursor: pointer;
   position: relative;
@@ -4399,8 +4378,8 @@ a.wp-block-button__link:visited.has-text-color.has-background:hover {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 22px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   padding: 10px;
   margin: 0 4px 12px 0;
@@ -4424,8 +4403,8 @@ a.wp-block-button__link:visited.has-text-color.has-background:hover {
   background-color: rgba(40, 28, 60, 0.04);
   font-size: 15px;
   line-height: 20px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -4476,14 +4455,14 @@ a.wp-block-button__link:visited.has-text-color.has-background:hover {
   width: 100%;
 }
 .single-member .member-name {
-  font-family: "Axiforma-Bold", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   margin-bottom: 8px;
 }
 .single-member .designation {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 18px;
   margin-bottom: 0;
@@ -4620,13 +4599,16 @@ a.wp-block-button__link:visited.has-text-color.has-background:hover {
   width: 64%;
 }
 .single-team .member-name-popup {
-  font-family: "Axiforma-Bold", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #14191f;
   margin-bottom: 5px;
 }
 .single-team .member-designation {
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
   color: #606364;
   margin-bottom: 0;
   font-size: 20px;
@@ -4665,6 +4647,51 @@ a.wp-block-button__link:visited.has-text-color.has-background:hover {
 }
 .image-at-left .column:first-child {
   margin: 0 0 0 2%;
+}
+
+/*-------------------------------------------------
+>> Styles for Root CSS
+-------------------------------------------------*/
+:root {
+  --size-display-1: 176px;
+  --size-display-2: 144px;
+  --size-display-3: 120px;
+  --size-display-4: 96px;
+  --size-heading-1: 72px;
+  --size-heading-2: 64px;
+  --size-heading-3: 48px;
+  --size-heading-4: 36 px;
+  --size-heading-5: 32px;
+  --size-heading-6: 24px;
+  --size-text-30: 30px;
+  --size-text-28: 28px;
+  --size-text-26: 26px;
+  --size-text-24: 24px;
+  --size-text-22: 22px;
+  --size-text-20: 20px;
+  --size-text-18: 18px;
+  --size-text-16: 16px;
+  --size-text-14: 14px;
+  --size-text-12: 12px;
+  --color-primary: #854eff;
+  --color-primary-100: #e9eff7;
+  --color-primary-200: #afbaca;
+  --color-primary-500: #5e718d;
+  --color-primary-600: #8897ae;
+  --color-secondary-1: #1886ff;
+  --color-secondary-2: #f1ecfe;
+  --color-secondary-3: #4a72ff;
+  --color-base--white: #fff;
+  --color-base-lgrey: #fcfcfd;
+  --color-base-lgrey: #f2f4f7;
+  --color-base-grey: #e6ebf2;
+  --color-base-dgrey: #c0c3c8;
+  --color-base-drgrey: #5e6278;
+  --color-base-black: #000;
+  --color-gradient-1: linear-gradient(180deg, #7d51f6 0%, #4a75f0 100%);
+  --color-gradient-2: linear-gradient(180deg, #4b75f1 0%, #7c53f7 100%);
+  --color-status-error: #f1416c;
+  --color-status: linear-gradient(180deg, #4b75f1 0%, #7c53f7 100%);
 }
 
 /* ------------------------------------------------------------------
@@ -4896,16 +4923,16 @@ figure th {
 > Import Fonts
 ------------------------------------------------------------------ */
 @font-face {
-  font-family: "axiforma-bold";
+  font-family: "ITC Avant Garde Gothic Std";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/axiforma-bold.woff2") format("woff2");
+  src: url("../fonts/ITCAvantGardeStd-BoldCnObl.woff2") format("woff2");
 }
 @font-face {
-  font-family: "axiforma-regular";
+  font-family: "ITC Avant Garde Gothic Std";
   font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/axiforma-regular.woff2") format("woff2");
+  font-weight: normal;
+  src: url("../fonts/ITCAvantGardeStd-DemiObl.woff2") format("woff2");
 }
 /* ------------------------------------------------------------------
 > Vendor CSS Starts Here

@@ -73,7 +73,7 @@ ol ul {
 				height: 6px;
 				background-position: left top;
 				position: absolute;
-				background-color: map-get($map: $base_colors, $key: list_marker_bgcolor);
+				background-color: var(--color-secondary-1);
 				left: 0;
 				top: 9px;
 				border-radius: 50%;
@@ -114,7 +114,7 @@ ol ul {
 			&::before {
 				color: map-get($map: $base_colors, $key: ol_list_marker_color);
 
-				@include font(axi, reg);
+				@include font(itc, reg);
 
 				content: counters(list, ".") ".";
 				counter-increment: list;

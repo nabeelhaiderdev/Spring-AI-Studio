@@ -17,10 +17,10 @@ h5,
 h6,
 .heading-6 {
 
-	@include font(axi, bold);
+	@include font(itc, bold);
 
 	margin: 0 0 20px;
-	color: map-get($map: $base_colors, $key: heading_color);
+	color: var(--color-primary-500);
 	line-height: 1.1;
 	text-transform: initial;
 

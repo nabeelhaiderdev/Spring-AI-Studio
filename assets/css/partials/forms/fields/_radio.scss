@@ -15,11 +15,11 @@
 [type="radio"]:checked + span,
 [type="radio"]:not(:checked) + span {
 	position: relative;
-	padding-left: 26px;
+	padding-left: 24px;
 	cursor: pointer;
 	line-height: 20px;
 	display: inline-block;
-	color: map-get( $map: $base_colors, $key: radio_color );
+	color: map-get($map: $base_colors, $key: radio_color);
 	box-sizing: border-box;
 	margin: 0 20px 10px 0;
 }
@@ -32,11 +32,10 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 18px;
-	height: 18px;
-	border: 1px solid map-get( $map: $base_colors, $key: radio_border_color );
-	border-radius: 100%;
-	background-color: map-get( $map: $base_colors, $key: radio_bgcolor );
+	width: 16px;
+	height: 16px;
+	border: 1px solid var(--color-primary-200);
+	border-radius: 50%;
 }
 
 [type="radio"]:checked + label::after,
@@ -44,24 +43,29 @@
 [type="radio"]:checked + span::after,
 [type="radio"]:not(:checked) + span::after {
 	content: "";
-	width: 10px;
-	height: 10px;
-	background-color: map-get( $map: $base_colors, $key: radio_after_bgcolor );
+	width: 16px;
+	height: 16px;
+	background-color: var(--color-secondary-3);
 	position: absolute;
-	top: 4px;
-	left: 4px;
-	border-radius: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
 	transition: all 0.2s ease;
+	background-repeat: no-repeat;
+	background-image: url(../img/checkbox-icon.svg);
+	background-position: center;
+	background-size: 10px;
+
 }
 
 [type="radio"]:not(:checked) + label::after,
 [type="radio"]:not(:checked) + span::after {
 	opacity: 0;
-	transform: scale( 0 );
+	transform: scale(0);
 }
 
 [type="radio"]:checked + label::after,
 [type="radio"]:checked + span::after {
 	opacity: 1;
-	transform: scale( 1 );
+	transform: scale(1);
 }

@@ -267,11 +267,11 @@ Mixin for transition
 .editor-styles-wrapper .heading-5,
 .editor-styles-wrapper h6,
 .editor-styles-wrapper .heading-6 {
-  font-family: "Axiforma-Bold", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0 0 20px;
-  color: #14191f;
+  color: var(--color-primary-500);
   line-height: 1.1;
   text-transform: initial;
 }
@@ -488,7 +488,7 @@ Mixin for transition
   height: 6px;
   background-position: left top;
   position: absolute;
-  background-color: #00a4eb;
+  background-color: var(--color-secondary-1);
   left: 0;
   top: 9px;
   border-radius: 50%;
@@ -518,8 +518,8 @@ Mixin for transition
 }
 .editor-styles-wrapper .page-section ol li::before {
   color: #303336;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   content: counters(list, ".") ".";
   counter-increment: list;
@@ -724,8 +724,8 @@ Mixin for transition
   text-align: left;
 }
 .editor-styles-wrapper .wp-caption p.wp-caption-text {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 18px;
   margin: 0;
@@ -898,8 +898,8 @@ Mixin for transition
   padding: 6px 12px 7px;
   font-size: 15px;
   line-height: 20px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   margin: 0 5px 10px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -977,8 +977,8 @@ Mixin for transition
   border-bottom: none;
 }
 .editor-styles-wrapper .comment-author.vcard span {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .editor-styles-wrapper .comment-metadata {
@@ -1255,6 +1255,9 @@ Mixin for transition
   /*-------------------------------------------------
   >> Basic styles for Image Alongside Text Block
   -------------------------------------------------*/
+  /*-------------------------------------------------
+  >> Styles for Root CSS
+  -------------------------------------------------*/
   /* Forms */
   /* -------------------------------------------------
   >> Styles for form fields
@@ -1391,11 +1394,6 @@ Mixin for transition
   transition: all 0.3s ease-in-out;
   outline: 0;
 }
-.acf-block-preview .top-bar {
-  padding: 10px 0;
-  background-color: #00a4eb;
-  color: #f7f7f7;
-}
 .acf-block-preview .nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1403,15 +1401,11 @@ Mixin for transition
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 8px;
-}
-.acf-block-preview .header-logo a {
-  display: inline-block;
 }
 .acf-block-preview .no-overflow {
   overflow: hidden;
 }
-.acf-block-preview .logo {
+.acf-block-preview .header-logo {
   position: relative;
   z-index: 9;
   line-height: 0.65;
@@ -1420,58 +1414,32 @@ Mixin for transition
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.acf-block-preview .logo a {
-  margin-top: 3px;
+.acf-block-preview .header-logo a,
+.acf-block-preview .header-logo a:visited {
   display: block;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  -webkit-transform-origin: left top;
-      -ms-transform-origin: left top;
-          transform-origin: left top;
 }
 .acf-block-preview .header-inner {
-  padding: 20px 0;
+  padding: 16px 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .acf-block-preview header {
-  background-color: #e6e6e6;
   z-index: 9;
   width: 100%;
   position: fixed;
   top: 0;
-}
-.acf-block-preview header.shrink .logo a {
-  -webkit-transform: scale(0.95);
-      -ms-transform: scale(0.95);
-          transform: scale(0.95);
-}
-.acf-block-preview header.shrink .top-bar {
-  display: none;
-}
-.acf-block-preview header.shrink .header-inner {
-  padding: 13px 0;
-}
-.acf-block-preview .header-wrapper {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 90%;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-.acf-block-preview .header-btns {
-  margin-top: 0;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .acf-block-preview body.logged-in.admin-bar header {
   top: 32px;
@@ -1511,8 +1479,8 @@ Mixin for transition
   display: inline-block;
   position: relative;
   line-height: 1;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .acf-block-preview .header-nav ul li a,
@@ -1524,8 +1492,8 @@ Mixin for transition
   position: relative;
   color: #14191f;
   font-size: 15px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .acf-block-preview .header-nav ul li a::after,
@@ -1612,8 +1580,8 @@ Mixin for transition
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .acf-block-preview .header-nav ul ul li a::after,
@@ -1724,8 +1692,8 @@ Mixin for transition
 .acf-block-preview .nav-overlay .header-nav ul ul li a:visited {
     padding: initial;
     text-transform: inherit;
-    font-family: "Axiforma-Regular", arial, sans-serif;
-    font-weight: 400;
+    font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+    font-weight: normal;
     font-style: normal;
   }
   .acf-block-preview .nav-overlay .header-nav ul ul li.current-menu-item > a, .acf-block-preview .nav-overlay .header-nav ul ul li.current-menu-parent > a {
@@ -2084,8 +2052,8 @@ Mixin for transition
   margin-bottom: 0;
   margin-left: 30px;
   font-size: 14px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .acf-block-preview .legal-nav ul li a,
@@ -2140,8 +2108,8 @@ Mixin for transition
 .acf-block-preview .legal-text {
   font-size: 15px;
   color: #f7f7f7;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   margin-right: 30px;
 }
@@ -2478,7 +2446,7 @@ Mixin for transition
 }
 .acf-block-preview .learn-more {
   color: #000;
-  font-family: "Axiforma-Bold", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -2502,7 +2470,7 @@ Mixin for transition
   text-align: center;
   border-radius: 0;
   line-height: 1.5;
-  font-family: "Axiforma-Bold", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 16px;
@@ -2535,8 +2503,8 @@ Mixin for transition
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   margin-right: 9px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 16px;
   border-radius: 100px;
@@ -2742,8 +2710,8 @@ Mixin for transition
   margin-bottom: 15px;
 }
 .acf-block-preview .post-tag a {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   margin-bottom: 8px;
   border-bottom: none;
@@ -2864,8 +2832,8 @@ Mixin for transition
   display: block;
   font-size: 24px;
   line-height: 30px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   cursor: pointer;
   position: relative;
@@ -2922,8 +2890,8 @@ Mixin for transition
   text-transform: uppercase;
   font-size: 16px;
   line-height: 22px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   padding: 10px;
   margin: 0 4px 12px 0;
@@ -2946,8 +2914,8 @@ Mixin for transition
   background-color: rgba(40, 28, 60, 0.04);
   font-size: 15px;
   line-height: 20px;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
 }
 .acf-block-preview .glossary-content {
@@ -2992,14 +2960,14 @@ Mixin for transition
   width: 100%;
 }
 .acf-block-preview .single-member .member-name {
-  font-family: "Axiforma-Bold", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   margin-bottom: 8px;
 }
 .acf-block-preview .single-member .designation {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 18px;
   margin-bottom: 0;
@@ -3129,13 +3097,16 @@ Mixin for transition
   width: 64%;
 }
 .acf-block-preview .single-team .member-name-popup {
-  font-family: "Axiforma-Bold", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #14191f;
   margin-bottom: 5px;
 }
 .acf-block-preview .single-team .member-designation {
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
   color: #606364;
   margin-bottom: 0;
   font-size: 20px;
@@ -3168,6 +3139,47 @@ Mixin for transition
 }
 .acf-block-preview .image-at-left .column:first-child {
   margin: 0 0 0 2%;
+}
+.acf-block-preview :root {
+  --size-display-1: 176px;
+  --size-display-2: 144px;
+  --size-display-3: 120px;
+  --size-display-4: 96px;
+  --size-heading-1: 72px;
+  --size-heading-2: 64px;
+  --size-heading-3: 48px;
+  --size-heading-4: 36 px;
+  --size-heading-5: 32px;
+  --size-heading-6: 24px;
+  --size-text-30: 30px;
+  --size-text-28: 28px;
+  --size-text-26: 26px;
+  --size-text-24: 24px;
+  --size-text-22: 22px;
+  --size-text-20: 20px;
+  --size-text-18: 18px;
+  --size-text-16: 16px;
+  --size-text-14: 14px;
+  --size-text-12: 12px;
+  --color-primary: #854eff;
+  --color-primary-100: #e9eff7;
+  --color-primary-200: #afbaca;
+  --color-primary-500: #5e718d;
+  --color-primary-600: #8897ae;
+  --color-secondary-1: #1886ff;
+  --color-secondary-2: #f1ecfe;
+  --color-secondary-3: #4a72ff;
+  --color-base--white: #fff;
+  --color-base-lgrey: #fcfcfd;
+  --color-base-lgrey: #f2f4f7;
+  --color-base-grey: #e6ebf2;
+  --color-base-dgrey: #c0c3c8;
+  --color-base-drgrey: #5e6278;
+  --color-base-black: #000;
+  --color-gradient-1: linear-gradient(180deg, #7d51f6 0%, #4a75f0 100%);
+  --color-gradient-2: linear-gradient(180deg, #4b75f1 0%, #7c53f7 100%);
+  --color-status-error: #f1416c;
+  --color-status: linear-gradient(180deg, #4b75f1 0%, #7c53f7 100%);
 }
 .acf-block-preview form {
   margin: 0 0 20px;
@@ -3204,8 +3216,8 @@ Mixin for transition
 .acf-block-preview select,
 .acf-block-preview textarea,
 .acf-block-preview .gform-text-input-reset {
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 18px;
   height: 50px;
@@ -3363,8 +3375,8 @@ Mixin for transition
   color: #f7f7f7;
   outline: none;
   border: none;
-  font-family: "Axiforma-Regular", arial, sans-serif;
-  font-weight: 400;
+  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-weight: normal;
   font-style: normal;
   font-size: 16px;
   height: 50px;
@@ -3396,11 +3408,11 @@ Mixin for transition
 .acf-block-preview [type=checkbox]:checked + span,
 .acf-block-preview [type=checkbox]:not(:checked) + span {
   position: relative;
-  padding-left: 26px;
+  padding-left: 24px;
+  line-height: 1;
   cursor: pointer;
-  line-height: 20px;
   display: inline-block;
-  color: #303336;
+  color: var(--color-primary-600);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 20px 10px 0;
@@ -3413,25 +3425,30 @@ Mixin for transition
   position: absolute;
   left: 0;
   top: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #e0e0e0;
-  background-color: #f0f0f0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-primary-200);
+  border-radius: 4px;
 }
 .acf-block-preview [type=checkbox]:checked + label::after,
 .acf-block-preview [type=checkbox]:not(:checked) + label::after,
 .acf-block-preview [type=checkbox]:checked + span::after,
 .acf-block-preview [type=checkbox]:not(:checked) + span::after {
   content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #00a4eb;
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-secondary-3);
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  background-repeat: no-repeat;
+  background-image: url(../img/checkbox-icon.svg);
+  background-position: center;
+  background-size: 10px;
 }
 .acf-block-preview [type=checkbox]:not(:checked) + label::after,
 .acf-block-preview [type=checkbox]:not(:checked) + span::after {
@@ -3447,6 +3464,20 @@ Mixin for transition
       -ms-transform: scale(1);
           transform: scale(1);
 }
+.acf-block-preview [type=checkbox]:hover + label::after,
+.acf-block-preview [type=checkbox]:hover + span::after {
+  background-color: var(--color-secondary-3);
+}
+.acf-block-preview .with-rounder-checkboxes [type=checkbox]:checked + label::before,
+.acf-block-preview .with-rounder-checkboxes [type=checkbox]:not(:checked) + label::before,
+.acf-block-preview .with-rounder-checkboxes [type=checkbox]:checked + span::before,
+.acf-block-preview .with-rounder-checkboxes [type=checkbox]:not(:checked) + span::before,
+.acf-block-preview .with-rounder-checkboxes [type=checkbox]:checked + label::after,
+.acf-block-preview .with-rounder-checkboxes [type=checkbox]:not(:checked) + label::after,
+.acf-block-preview .with-rounder-checkboxes [type=checkbox]:checked + span::after,
+.acf-block-preview .with-rounder-checkboxes [type=checkbox]:not(:checked) + span::after {
+  border-radius: 50%;
+}
 .acf-block-preview [type=radio]:checked,
 .acf-block-preview [type=radio]:not(:checked) {
   position: absolute;
@@ -3457,7 +3488,7 @@ Mixin for transition
 .acf-block-preview [type=radio]:checked + span,
 .acf-block-preview [type=radio]:not(:checked) + span {
   position: relative;
-  padding-left: 26px;
+  padding-left: 24px;
   cursor: pointer;
   line-height: 20px;
   display: inline-block;
@@ -3474,27 +3505,30 @@ Mixin for transition
   position: absolute;
   left: 0;
   top: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #e0e0e0;
-  border-radius: 100%;
-  background-color: #f0f0f0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-primary-200);
+  border-radius: 50%;
 }
 .acf-block-preview [type=radio]:checked + label::after,
 .acf-block-preview [type=radio]:not(:checked) + label::after,
 .acf-block-preview [type=radio]:checked + span::after,
 .acf-block-preview [type=radio]:not(:checked) + span::after {
   content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #00a4eb;
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-secondary-3);
   position: absolute;
-  top: 4px;
-  left: 4px;
-  border-radius: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  background-repeat: no-repeat;
+  background-image: url(../img/checkbox-icon.svg);
+  background-position: center;
+  background-size: 10px;
 }
 .acf-block-preview [type=radio]:not(:checked) + label::after,
 .acf-block-preview [type=radio]:not(:checked) + span::after {

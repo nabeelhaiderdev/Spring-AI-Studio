@@ -32,7 +32,7 @@
 			position: relative;
 			line-height: 1;
 
-			@include font(axi, reg);
+			@include font(itc, reg);
 
 			a,
 			a:visited {
@@ -44,7 +44,7 @@
 				color: map-get($map: $base_colors, $key: header_nav_color);
 				font-size: 15px;
 
-				@include font(axi, reg);
+				@include font(itc, reg);
 
 				&::after {
 					content: "";
@@ -125,7 +125,7 @@
 					color: map-get($map: $base_colors, $key: header_nav_second_link_color);
 
 					@include transition(all, 0.3s, ease-in-out);
-					@include font(axi, reg);
+					@include font(itc, reg);
 
 					&::after {
 						bottom: -4px;

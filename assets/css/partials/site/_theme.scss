@@ -269,7 +269,7 @@
 .learn-more {
 	color: map-get($map: $colors, $key: pure_black);
 
-	@include font(axi, bold);
+	@include font(itc, bold);
 }
 
 a.button,
@@ -290,7 +290,7 @@ span.button {
 	border-radius: 0;
 	line-height: 1.5;
 
-	@include font(axi, bold);
+	@include font(itc, bold);
 
 	font-size: 16px;
 
@@ -319,7 +319,7 @@ a.wp-block-button__link:visited {
 	transition: all 0.35s ease-in-out;
 	margin-right: 9px;
 
-	@include font(axi, reg);
+	@include font(itc, reg);
 
 	font-size: 16px;
 	border-radius: 100px;

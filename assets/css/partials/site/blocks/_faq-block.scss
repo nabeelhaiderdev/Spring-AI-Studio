@@ -12,7 +12,7 @@
 		line-height: 30px;
 		color: map-get($colors, eg);
 
-		@include font(axi, reg);
+		@include font(itc, reg);
 
 		cursor: pointer;
 		position: relative;
@@ -86,7 +86,7 @@
 		font-size: 16px;
 		line-height: 22px;
 
-		@include font(axi, reg);
+		@include font(itc, reg);
 
 		padding: 10px;
 		color: map-get($map: $colors, $key: black);
@@ -112,7 +112,7 @@
 	font-size: 15px;
 	line-height: 20px;
 
-	@include font(axi, reg);
+	@include font(itc, reg);
 }
 
 .glossary-content {

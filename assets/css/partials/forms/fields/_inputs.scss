@@ -44,14 +44,14 @@ select,
 textarea,
 .gform-text-input-reset {
 
-	@include font(axi, reg);
+	@include font(itc, reg);
 
 	font-size: 18px;
 	height: 50px;
 	width: 100%;
-	border: 1px solid map-get( $map: $base_colors, $key: input_border_color );
-	background-color: map-get( $map: $base_colors, $key: input_bgcolor );
-	color: map-get( $map: $base_colors, $key: input_color );
+	border: 1px solid map-get($map: $base_colors, $key: input_border_color);
+	background-color: map-get($map: $base_colors, $key: input_bgcolor);
+	color: map-get($map: $base_colors, $key: input_color);
 	outline: none;
 	padding: 0 0 0 12px;
 	margin: 0 0 20px;
@@ -61,7 +61,7 @@ textarea,
 	@include transition(all, 0.4s, ease-in-out);
 
 	&:focus {
-		border: 1px solid map-get( $map: $base_colors, $key: input_focus_border_color );
+		border: 1px solid map-get($map: $base_colors, $key: input_focus_border_color);
 	}
 }
 
@@ -69,20 +69,20 @@ textarea,
 // Placeholder Style
 
 ::input-placeholder {
-	color: map-get( $map: $base_colors, $key: placeholder_color );
+	color: map-get($map: $base_colors, $key: placeholder_color);
 }
 
 ::input-placeholder {
-	color: map-get( $map: $base_colors, $key: placeholder_color );
+	color: map-get($map: $base_colors, $key: placeholder_color);
 }
 
 ::placeholder {
-	color: map-get( $map: $base_colors, $key: placeholder_color );
+	color: map-get($map: $base_colors, $key: placeholder_color);
 }
 
 input[type="text"]:disabled {
-	background-color: map-get( $map: $base_colors, $key: disabled_input_bgcolor );
-	border: 1px solid map-get( $map: $base_colors, $key: disabled_input_border_color );
+	background-color: map-get($map: $base_colors, $key: disabled_input_bgcolor);
+	border: 1px solid map-get($map: $base_colors, $key: disabled_input_border_color);
 }
 
 input[type="hidden"],
@@ -97,7 +97,7 @@ input[type="file"] {
 // Search Field Style
 
 input[type="search"] {
-	background-image: url( ../img/search-icon.svg );
+	background-image: url(../img/search-icon.svg);
 	background-repeat: no-repeat;
 	background-position: center right 10px;
 	padding-right: 45px;
@@ -125,8 +125,8 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 input[type="color"] {
-	border: 1px solid map-get( $map: $base_colors, $key: color_field_border_color );
-	background-color: map-get( $map: $base_colors, $key: color_field_bgcolor );
+	border: 1px solid map-get($map: $base_colors, $key: color_field_border_color);
+	background-color: map-get($map: $base_colors, $key: color_field_bgcolor);
 	height: 25px;
 	width: 50px;
 	margin: 0 0 20px;
@@ -158,7 +158,7 @@ input[type="color"] {
 select {
 	cursor: pointer;
 	appearance: none;
-	background-image: url( ../img/select-icon.svg );
+	background-image: url(../img/select-icon.svg);
 	background-repeat: no-repeat;
 	background-position: center right 10px;
 }
