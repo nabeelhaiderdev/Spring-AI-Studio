@@ -76,12 +76,25 @@ jQuery( document ).ready( function( jQuery ) {
 		jQuery( '.header-dropdown--box' ).toggleClass( 'header-dropdown--box--active' );
 	} );
 
-	 jQuery( document ).mouseup( function( e ) {
-		const container = jQuery( '#profile__picture,.header__content--dropdown' );
+	jQuery( '.button-dropdown__content--ratio' ).on( 'click', function() {
+		jQuery( this ).toggleClass( 'ratio--active' );
+	} );
+
+	jQuery( '#all-options' ).on( 'click', function() {
+		jQuery( this ).toggleClass( 'dropdown--active' );
+	} );
+
+	jQuery( '.select--button' ).on( 'click', function() {
+		jQuery( this ).toggleClass( 'dropdown--active' );
+	} );
+
+	jQuery( document ).mouseup( function( e ) {
+		const container = jQuery( '#profile__picture,.header__content--dropdown,.button-dropdown__content--ratio,#all-options,.select--button' );
 		// if the target of the click isn't the container nor a descendant of the container
 		if ( ! container.is( e.target ) && container.has( e.target ).length === 0 ) {
 			jQuery( '.profile-menu' ).removeClass( 'active--menu' );
 			jQuery( '.header-dropdown--box' ).removeClass( 'header-dropdown--box--active' );
+			jQuery( '#all-options, .select--button' ).removeClass( 'dropdown--active' );
 		}
 	} );
 

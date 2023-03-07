@@ -19,8 +19,8 @@ input[type="reset"] {
 
 	@include transition(all, 0.4s, ease-in-out);
 
-	background-color: map-get($map: $base_colors, $key: button_bgcolor);
-	color: map-get($map: $base_colors, $key: button_color);
+	background-color: var(--color-secondary-3);
+	color: var(--color-base-white);
 	outline: none;
 	border: none;
 
@@ -30,13 +30,13 @@ input[type="reset"] {
 	height: 50px;
 	outline: none;
 	cursor: pointer;
+	border-radius: 50px;
 }
 
 input[type="submit"]:hover,
 button:hover,
 input[type="button"]:hover {
-	color: map-get($map: $base_colors, $key: button_color_hover);
-	background-color: map-get($map: $base_colors, $key: button_bgcolor_hover);
+	background-color: var(--color-secondary-4);
 }
 
 input[type="reset"] {

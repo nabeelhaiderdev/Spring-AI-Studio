@@ -45,7 +45,6 @@ textarea,
 .gform-text-input-reset {
 
 	@include font(itc, reg);
-
 	font-size: 18px;
 	height: 50px;
 	width: 100%;
@@ -69,15 +68,15 @@ textarea,
 // Placeholder Style
 
 ::input-placeholder {
-	color: map-get($map: $base_colors, $key: placeholder_color);
+	color: var(--color-primary-200);
 }
 
 ::input-placeholder {
-	color: map-get($map: $base_colors, $key: placeholder_color);
+	color: var(--color-primary-200);
 }
 
 ::placeholder {
-	color: map-get($map: $base_colors, $key: placeholder_color);
+	color: var(--color-primary-200);
 }
 
 input[type="text"]:disabled {

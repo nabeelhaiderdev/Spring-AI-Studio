@@ -8,3 +8,54 @@
 		letter-spacing: 4px;
 	}
 }
+
+.parent-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 20px;
+
+	&__item {
+		min-width: 200px;
+
+		a,
+		a:visited {
+			display: flex;
+			flex-wrap: wrap;
+			border: 2px solid var(--color-primary-400);
+			box-shadow: inset 12.5715px 10.0572px 14.2477px rgba(209, 217, 230, 0.34), inset -12.57px -10px 15.9239px rgba(209, 217, 230, 0.2);
+			border-radius: 88px;
+			padding: 10px 12px;
+			box-sizing: border-box;
+			color: var(--color-primary-600);
+
+			span {
+				display: inline-block;
+			}
+
+			.tab-icon {
+				width: 50px;
+				height: 50px;
+				background-color: var(--color-base-white);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: 16px;
+			}
+
+			&:hover {
+				background: linear-gradient(180deg, #e5f0fc 0%, #fff 100%);
+				box-shadow: 12.5715px 22.6287px 28.0763px rgba(209, 217, 230, 0.67), 12.5715px 10.0572px 14.2477px rgba(209, 217, 230, 0.34), 12.5715px 11.7334px 15.9239px rgba(209, 217, 230, 0.4), 12.5715px 14.6667px 18.8572px rgba(209, 217, 230, 0.48), -8.38099px -13.143px 14.6776px rgba(255, 255, 255, 0.44708), -8.38099px -11.9087px 12.6413px rgba(255, 255, 255, 0.375);
+				color: var(--color-primary-500);
+			}
+		}
+
+		&--tab {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+
+		}
+	}
+}

@@ -23,14 +23,13 @@ a {
 
 	a,
 	&:visited {
-		color: map-get($map: $base_colors, $key: link_color);
-		border-bottom: 1px solid map-get($map: $base_colors, $key: link_border_color);
+		color: var(--color-primary-100);
+		border-bottom: 1px solid var(--color-primary-100);
 		padding-bottom: 2px;
 
 		&:hover,
 		&:active {
-			color: map-get($map: $base_colors, $key: link_color_hover);
-			border-color: map-get($map: $base_colors, $key: link_border_color_hover);
+			border-color: transparent;
 		}
 	}
 }
