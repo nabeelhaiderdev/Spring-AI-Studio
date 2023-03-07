@@ -22,3 +22,9 @@ p {
 	color: var(--color-base--white);
 	background-color: var(--color-primary);
 }
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}

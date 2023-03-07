@@ -26,12 +26,16 @@
 	--color-primary: #854eff;
 	--color-primary-100: #e9eff7;
 	--color-primary-200: #afbaca;
+	--color-primary-300: #3d4a5c;
+	--color-primary-400: #f0f3f9;
 	--color-primary-500: #5e718d;
 	--color-primary-600: #8897ae;
 	--color-secondary-1: #1886ff;
 	--color-secondary-2: #f1ecfe;
 	--color-secondary-3: #4a72ff;
-	--color-base--white: #fff;
+	--color-secondary-4: #0f43ff;
+
+	--color-base-white: #fff;
 	--color-base-lgrey: #fcfcfd;
 	--color-base-lgrey: #f2f4f7;
 	--color-base-grey: #e6ebf2;
@@ -43,4 +47,7 @@
 	--color-status-error: #f1416c;
 	--color-status: linear-gradient(180deg, #4b75f1 0%, #7c53f7 100%);
 
+	// Radius
+
+	--radius-100: 100px;
 }
