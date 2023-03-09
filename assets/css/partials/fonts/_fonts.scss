@@ -4,15 +4,15 @@ $base-font-stack: (
 	itc: (
 		reg: (
 			family: (
-				"ITC Avant Garde Gothic Std",
+				"ITC Avant Garde Gothic Std Demi Condensed",
 				arial,
 				sans-serif,
 			),
 			weight: normal,
 			style: normal,
 			font-face: (
-				family: "ITC Avant Garde Gothic Std",
-				path: "ITCAvantGardeStd-DemiObl",
+				family: "ITC Avant Garde Gothic Std Book Condensed",
+				path: "ITCAvantGardeStd-BkCn",
 				formats: (
 					woff2,
 				),
@@ -20,15 +20,31 @@ $base-font-stack: (
 		),
 		med: (
 			family: (
-				"ITC Avant Garde Gothic Std",
+				"ITC Avant Garde Std Bk",
 				arial,
 				sans-serif,
 			),
 			weight: 500,
 			style: normal,
 			font-face: (
-				family: "ITC Avant Garde Gothic Std",
-				path: "ITCAvantGardeStd-MdObl",
+				family: "ITC Avant Garde Std Bk",
+				path: "ITCAvantGardeStd-Md",
+				formats: (
+					woff2,
+				),
+			),
+		),
+		demi: (
+			family: (
+				"ITC Avant Garde Std Bk",
+				arial,
+				sans-serif,
+			),
+			weight: 500,
+			style: normal,
+			font-face: (
+				family: "ITC Avant Garde Std Bk",
+				path: "ITCAvantGardeStd-Demi",
 				formats: (
 					woff2,
 				),
@@ -36,14 +52,14 @@ $base-font-stack: (
 		),
 		bold: (
 			family: (
-				"ITC Avant Garde Gothic Std",
+				"ITC Avant Garde Gothic Std Bold Condensed",
 				arial,
 				sans-serif,
 			),
 			weight: 700,
 			style: normal,
 			font-face: (
-				family: "ITC Avant Garde Gothic Std",
+				family: "ITC Avant Garde Gothic Std Bold Condensed",
 				path: "ITCAvantGardeStd-BoldCnObl",
 				formats: (
 					woff2,

@@ -267,7 +267,7 @@ Mixin for transition
 .editor-styles-wrapper .heading-5,
 .editor-styles-wrapper h6,
 .editor-styles-wrapper .heading-6 {
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Bold Condensed", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   margin: 0 0 20px;
@@ -489,7 +489,7 @@ Mixin for transition
 }
 .editor-styles-wrapper .page-section ol li::before {
   color: #303336;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   content: counters(list, ".") ".";
@@ -695,7 +695,7 @@ Mixin for transition
   text-align: left;
 }
 .editor-styles-wrapper .wp-caption p.wp-caption-text {
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 18px;
@@ -869,7 +869,7 @@ Mixin for transition
   padding: 6px 12px 7px;
   font-size: 15px;
   line-height: 20px;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   margin: 0 5px 10px;
@@ -948,7 +948,7 @@ Mixin for transition
   border-bottom: none;
 }
 .editor-styles-wrapper .comment-author.vcard span {
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -1767,7 +1767,7 @@ Mixin for transition
 .acf-block-preview .button-dropdown__styles--style a,
 .acf-block-preview .button-dropdown__styles--style a:visited {
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 2;
   color: var(--color-base-white);
   display: block;
   padding: 8px 16px;
@@ -1782,7 +1782,7 @@ Mixin for transition
   width: 100%;
   height: 100%;
   background: var(--color-base-white);
-  opacity: 0.6;
+  opacity: 0.4;
   z-index: 1;
   display: block;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1801,6 +1801,26 @@ Mixin for transition
 .acf-block-preview .select--button.dropdown--active .button-dropdown,
 .acf-block-preview .all--options.dropdown--active .button-dropdown {
   display: block;
+}
+.acf-block-preview a.button-dropdown__content--link,
+.acf-block-preview a.button-dropdown__content--link:visited {
+  background-image: url(../img/submenu-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center left 16px;
+  background-size: 16px;
+  padding: 12px 12px 12px 44px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: var(--color-base-white);
+  border: 1px solid var(--color-primary-700);
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 16px;
+  color: var(--color-primary-600);
+}
+.acf-block-preview a.button-dropdown__content--link:hover,
+.acf-block-preview a.button-dropdown__content--link:visited:hover {
+  color: var(--color-primary-300);
 }
 @media (min-width: 1024px) {
   .acf-block-preview .header-nav ul li:hover > ul {
@@ -1834,7 +1854,7 @@ Mixin for transition
   display: inline-block;
   position: relative;
   line-height: 1;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -1847,7 +1867,7 @@ Mixin for transition
   position: relative;
   color: #14191f;
   font-size: 15px;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -1935,7 +1955,7 @@ Mixin for transition
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -2047,7 +2067,7 @@ Mixin for transition
 .acf-block-preview .nav-overlay .header-nav ul ul li a:visited {
     padding: initial;
     text-transform: inherit;
-    font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+    font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
     font-weight: normal;
     font-style: normal;
   }
@@ -2449,7 +2469,7 @@ Mixin for transition
   margin-bottom: 0;
   margin-left: 30px;
   font-size: 14px;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -2505,7 +2525,7 @@ Mixin for transition
 .acf-block-preview .legal-text {
   font-size: 15px;
   color: #f7f7f7;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   margin-right: 30px;
@@ -2635,7 +2655,7 @@ Mixin for transition
 }
 .acf-block-preview .learn-more {
   color: #000;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Bold Condensed", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -2656,7 +2676,7 @@ Mixin for transition
   text-align: center;
   border-radius: 0;
   line-height: 1.7;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Std Bk", arial, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
@@ -2765,7 +2785,7 @@ Mixin for transition
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   margin-right: 9px;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
@@ -2972,7 +2992,7 @@ Mixin for transition
   margin-bottom: 15px;
 }
 .acf-block-preview .post-tag a {
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   margin-bottom: 8px;
@@ -3094,7 +3114,7 @@ Mixin for transition
   display: block;
   font-size: 24px;
   line-height: 30px;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   cursor: pointer;
@@ -3152,7 +3172,7 @@ Mixin for transition
   text-transform: uppercase;
   font-size: 16px;
   line-height: 22px;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   padding: 10px;
@@ -3176,7 +3196,7 @@ Mixin for transition
   background-color: rgba(40, 28, 60, 0.04);
   font-size: 15px;
   line-height: 20px;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -3222,13 +3242,13 @@ Mixin for transition
   width: 100%;
 }
 .acf-block-preview .single-member .member-name {
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Bold Condensed", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   margin-bottom: 8px;
 }
 .acf-block-preview .single-member .designation {
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 18px;
@@ -3359,14 +3379,14 @@ Mixin for transition
   width: 64%;
 }
 .acf-block-preview .single-team .member-name-popup {
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Bold Condensed", arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #14191f;
   margin-bottom: 5px;
 }
 .acf-block-preview .single-team .member-designation {
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #606364;
@@ -3483,7 +3503,7 @@ Mixin for transition
 .acf-block-preview select,
 .acf-block-preview textarea,
 .acf-block-preview .gform-text-input-reset {
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 18px;
@@ -3642,7 +3662,7 @@ Mixin for transition
   color: var(--color-base-white);
   outline: none;
   border: none;
-  font-family: "ITC Avant Garde Gothic Std", arial, sans-serif;
+  font-family: "ITC Avant Garde Gothic Std Demi Condensed", arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;

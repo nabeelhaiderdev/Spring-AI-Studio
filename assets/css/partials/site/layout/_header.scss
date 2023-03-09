@@ -423,7 +423,7 @@ button.all--options {
 			a,
 			a:visited {
 				font-size: 14px;
-				line-height: 1.7;
+				line-height: 2;
 				color: var(--color-base-white);
 				display: block;
 				padding: 8px 16px;
@@ -438,7 +438,7 @@ button.all--options {
 				width: 100%;
 				height: 100%;
 				background: var(--color-base-white);
-				opacity: 0.6;
+				opacity: 0.4;
 				z-index: 1;
 				display: block;
 				transition: all 0.3s ease-in-out;
@@ -470,5 +470,26 @@ button.all--options {
 
 	.button-dropdown {
 		display: block;
+	}
+}
+
+
+a.button-dropdown__content--link,
+a.button-dropdown__content--link:visited {
+	background-image: url(../img/submenu-icon.svg);
+	background-repeat: no-repeat;
+	background-position: center left 16px;
+	background-size: 16px;
+	padding: 12px 12px 12px 44px;
+	box-sizing: border-box;
+	background-color: var(--color-base-white);
+	border: 1px solid var(--color-primary-700);
+	border-radius: 4px;
+	display: block;
+	margin-bottom: 16px;
+	color: var(--color-primary-600);
+
+	&:hover {
+		color: var(--color-primary-300);
 	}
 }
