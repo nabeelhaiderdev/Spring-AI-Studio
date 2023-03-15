@@ -75,26 +75,17 @@ jQuery( document ).ready( function( jQuery ) {
 	jQuery( '.header__content--dropdown' ).on( 'click', function() {
 		jQuery( '.header-dropdown--box' ).toggleClass( 'header-dropdown--box--active' );
 	} );
-
-	jQuery( '.button-dropdown__content--ratio' ).on( 'click', function() {
-		jQuery( this ).toggleClass( 'ratio--active' );
-	} );
-
-	jQuery( '#all-options' ).on( 'click', function() {
-		jQuery( this ).toggleClass( 'dropdown--active' );
-	} );
-
-	jQuery( '.select--button' ).on( 'click', function() {
-		jQuery( this ).toggleClass( 'dropdown--active' );
+	jQuery( '.cross-btn img' ).on( 'click', function() {
+		jQuery( this ).parents( '.select-dropdown__list' ).removeClass( 'active' );
 	} );
 
 	jQuery( document ).mouseup( function( e ) {
-		const container = jQuery( '#profile__picture,.header__content--dropdown,.button-dropdown__content--ratio,#all-options,.select--button' );
+		const container = jQuery( '#profile__picture,.select-dropdown__list,.select-dropdown__button,.header__content--dropdown' );
 		// if the target of the click isn't the container nor a descendant of the container
 		if ( ! container.is( e.target ) && container.has( e.target ).length === 0 ) {
 			jQuery( '.profile-menu' ).removeClass( 'active--menu' );
 			jQuery( '.header-dropdown--box' ).removeClass( 'header-dropdown--box--active' );
-			jQuery( '#all-options, .select--button' ).removeClass( 'dropdown--active' );
+			jQuery( '.select-dropdown__list' ).removeClass( 'active' );
 		}
 	} );
 
@@ -105,5 +96,16 @@ jQuery( document ).ready( function( jQuery ) {
 
 	jQuery( '.header-dropdown--box ul li' ).on( 'click', function() {
 		jQuery( this ).toggleClass( 'checked--item' );
+	} );
+
+	jQuery( '.select-dropdown__button' ).on( 'click', function() {
+		jQuery( '.select-dropdown__list' ).toggleClass( 'active' );
+	} );
+
+	jQuery( '.select-dropdown__ratio' ).on( 'click', function() {
+		const itemValue = jQuery( this ).children().find( '.select-dropdown__inner-title' ).data( 'value' );
+		jQuery( this ).addClass( 'active-ratio' ).siblings().removeClass( 'active-ratio' );
+		jQuery( '.select-dropdown__button span' ).text( jQuery( this ).text() ).parents().attr( 'data-value', itemValue );
+		jQuery( this ).parents().toggleClass( 'active' );
 	} );
 } );

@@ -26,7 +26,7 @@ header {
 	box-sizing: border-box;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
 
 	&__logo {
@@ -119,6 +119,11 @@ body.logged-in.admin-bar {
 	header {
 		top: 32px;
 	}
+}
+
+.header__logo,
+.profile {
+	margin-top: 8px;
 }
 
 .desktop-hide {
@@ -252,28 +257,31 @@ body.logged-in.admin-bar {
 }
 
 
-button.select--button {
-	background-color: transparent;
-	color: var(--color-primary-600);
-	height: 36px;
-	font-size: 14px;
-	border: 1px solid var(--color-primary-600);
-	padding: 6px 40px 6px 12px;
-	background-image: url(../img/submenu-icon.svg);
-	background-repeat: no-repeat;
-	background-position: center right 10px;
-	background-size: 15px;
+.select-dropdown {
 	position: relative;
 
-	&:hover {
-		background-color: rgba(85, 106, 254, 0.1);
-	}
+	button {
+		background-color: transparent;
+		color: var(--color-primary-600);
+		height: 36px;
+		font-size: 14px;
+		border: 1px solid var(--color-primary-600);
+		padding: 6px 40px 6px 12px;
+		background-image: url(../img/submenu-icon.svg);
+		background-repeat: no-repeat;
+		background-position: center right 10px;
+		background-size: 15px;
 
-	&.active--button {
-		background-image: url(../img/cross-icon.svg);
-		background-color: rgba(74, 114, 255, 0.08);
-		color: var(--color-secondary-3);
-		border-color: var(--color-secondary-3);
+		&:hover {
+			background-color: rgba(85, 106, 254, 0.1);
+		}
+
+		&.active--button {
+			background-image: url(../img/cross-icon.svg);
+			background-color: rgba(74, 114, 255, 0.08);
+			color: var(--color-secondary-3);
+			border-color: var(--color-secondary-3);
+		}
 	}
 }
 
@@ -289,8 +297,20 @@ button.all--options {
 	position: relative;
 }
 
+.select-dropdown {
 
-.button-dropdown {
+	&__ratio {
+		display: flex;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: 16px;
+	}
+}
+
+
+.select-dropdown__list {
 	width: 288px;
 	background-color: var(--color-primary-400);
 	box-shadow: 0 20px 24px -4px rgba(45, 54, 67, 0.04), 0 8px 11px -4px rgba(45, 54, 67, 0.04);
@@ -305,6 +325,8 @@ button.all--options {
 	display: none;
 	cursor: auto;
 	z-index: 99;
+	border-radius: 6px;
+	margin: 0;
 
 	&__title {
 		font-size: 16px;
@@ -327,36 +349,6 @@ button.all--options {
 			margin-bottom: 0;
 			padding-bottom: 0;
 			border-bottom: 0;
-		}
-
-
-		&--image {
-			height: 40px;
-			border: 1px solid var(--color-primary-700);
-			margin-right: 8px;
-			border-radius: 4px;
-
-			&.square {
-				width: 40px;
-			}
-
-			&.landscape {
-				width: 50px;
-			}
-
-			&.portrait {
-				width: 36px;
-			}
-
-			&.portrait-large {
-				width: 38px;
-			}
-
-			&.mobile-verticle {
-				width: 24px;
-			}
-
-
 		}
 
 		&--type {
@@ -384,18 +376,53 @@ button.all--options {
 			}
 		}
 
-		&--btn {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 10px;
-			position: absolute;
-			top: 10px;
-			right: 10px;
 
-			img {
-				width: 14px;
-				height: 14px;
-			}
+		&--addimage {
+			position: relative;
+		}
+	}
+
+	&--image {
+		height: 40px;
+		border: 1px solid var(--color-primary-700);
+		margin-right: 8px;
+		border-radius: 4px;
+
+		&.square {
+			width: 40px;
+		}
+
+		&.landscape {
+			width: 50px;
+		}
+
+		&.portrait {
+			width: 36px;
+		}
+
+		&.portrait-large {
+			width: 38px;
+		}
+
+		&.mobile-verticle {
+			width: 24px;
+		}
+
+
+	}
+
+	&--btn {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		position: absolute;
+		top: 20px;
+		right: 15px;
+		line-height: 1;
+
+		img {
+			width: 14px;
+			height: 14px;
 		}
 	}
 
@@ -456,26 +483,30 @@ button.all--options {
 			}
 		}
 	}
+
+	&.active {
+		display: block;
+	}
 }
 
-.button-dropdown__content--ratio.ratio--active {
+.select-dropdown__ratio.active-ratio {
 
-	.button-dropdown__content--image {
+	.select-dropdown__list--image {
 		border: 2px solid var(--color-secondary-3);
 	}
 }
 
-.select--button.dropdown--active,
+.select-dropdown.dropdown--active,
 .all--options.dropdown--active {
 
-	.button-dropdown {
+	.select-dropdown {
 		display: block;
 	}
 }
 
 
-a.button-dropdown__content--link,
-a.button-dropdown__content--link:visited {
+a.select-dropdown__content--link,
+a.select-dropdown__content--link:visited {
 	background-image: url(../img/submenu-icon.svg);
 	background-repeat: no-repeat;
 	background-position: center left 16px;
@@ -491,5 +522,23 @@ a.button-dropdown__content--link:visited {
 
 	&:hover {
 		color: var(--color-primary-300);
+	}
+}
+
+.uplaod--image {
+	width: 500px;
+	right: 0;
+	left: auto;
+
+	input {
+		margin-bottom: 0;
+	}
+
+	input[type="submit"] {
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: transparent;
+		color: var(--color-secondary-3);
 	}
 }

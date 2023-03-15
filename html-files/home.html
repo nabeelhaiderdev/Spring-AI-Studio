@@ -38,7 +38,7 @@
 				</div>
 			</div>
 			<div class="header__content--bottom">
-				<button class="all--options" id="all-options">All options
+				<!-- <button class="all--options" id="all-options">All options
 					<div class="button-dropdown">
 						<div class="button-dropdown__title">All Options</div>
 						<div class="button-dropdown__content">
@@ -95,8 +95,9 @@
 							<label for="social-networking">Social Networking</label> <br />
 						</div>
 					</div>
-				</button>
-				<button class="select--button" id="ratio-btn">Ratio
+				</button> -->
+				<!-- <div class="select--button">
+					<button href="#" role="button" id="ratio-btn" data-value=""><span>Ratio</span></button>
 					<div class="button-dropdown">
 						<div class="button-dropdown__content">
 							<div class="button-dropdown__content--btn">
@@ -111,31 +112,97 @@
 							<ul>
 								<li class="button-dropdown__content--ratio">
 									<div class="button-dropdown__content--image square"></div>
-									<div class="button-dropdown__content--title">Square (1 : 1)</div>
+									<div class="button-dropdown__content--title" data-value="1">Square (1 : 1)</div>
 								</li>
 								<li class="button-dropdown__content--ratio">
 									<div class="button-dropdown__content--image landscape"></div>
-									<div class="button-dropdown__content--title">Landscape (3:2)</div>
+									<div class="button-dropdown__content--title" data-value="2">Landscape (3:2) </div>
 								</li>
 								<li class="button-dropdown__content--ratio">
 									<div class="button-dropdown__content--image portrait"></div>
-									<div class="button-dropdown__content--title">Portrait (3:2)</div>
+									<div class="button-dropdown__content--title" data-value="3">Portrait (3:2)</div>
 								</li>
 								<li class="button-dropdown__content--ratio">
 									<div class="button-dropdown__content--image portrait-large"></div>
-									<div class="button-dropdown__content--title">Portrait (3:2)</div>
+									<div class="button-dropdown__content--title" data-value="4">Portrait (3:2)</div>
 									<div class="button-dropdown__content--type">Premium</div>
 								</li>
 								<li class="button-dropdown__content--ratio">
 									<div class="button-dropdown__content--image mobile-verticle"></div>
-									<div class="button-dropdown__content--title">Mobile vertical (9:16)</div>
+									<div class="button-dropdown__content--title" data-value="5">Mobile vertical (9:16)
+									</div>
 									<div class="button-dropdown__content--type">Premium</div>
 								</li>
 							</ul>
 						</div>
 					</div>
-				</button>
-				<button class="select--button">Design
+				</div> -->
+				<div class="select-dropdown">
+					<button href="#" role="button" data-value="" class="select-dropdown__button"><span> Ratio
+						</span></button>
+					<ul class="select-dropdown__list">
+						<div class="select-dropdown__list--btn">
+							<div class="refresh-btn">
+								<img src="../assets/img/refresh-icon.svg" alt="Icon">
+							</div>
+							<div class="cross-btn">
+								<img src="../assets/img/cross-icon-gray.svg" alt="Icon">
+							</div>
+						</div>
+						<div class="select-dropdown__title">Ratio</div>
+						<li class="select-dropdown__ratio">
+							<div class="select-dropdown__list--image square"></div>
+							<div class="select-dropdown__inner-title" data-value="1">Square (1 : 1)</div>
+						</li>
+						<li class="select-dropdown__ratio">
+							<div class="select-dropdown__list--image landscape"></div>
+							<div class="select-dropdown__inner-title" data-value="2">Landscape (3:2) </div>
+						</li>
+						<li class="select-dropdown__ratio">
+							<div class="select-dropdown__list--image portrait"></div>
+							<div class="select-dropdown__inner-title" data-value="3">Portrait (3:2)</div>
+						</li>
+						<li class="select-dropdown__ratio">
+							<div class="select-dropdown__list--image portrait-large"></div>
+							<div class="select-dropdown__inner-title" data-value="4">Portrait (3:2)</div>
+							<div class="select-dropdown__content--type">Premium</div>
+						</li>
+						<li class="select-dropdown__ratio">
+							<div class="select-dropdown__list--image mobile-verticle"></div>
+							<div class="select-dropdown__inner-title" data-value="5">Mobile vertical (9:16)
+							</div>
+							<div class="select-dropdown__content--type">Premium</div>
+						</li>
+					</ul>
+				</div>
+				<!-- <div class="select-dropdown">
+					<button href="#" role="button" data-value="" class="select-dropdown__button"><span> Design
+						</span></button>
+					<ul class="select-dropdown__list">
+						<div class="select-dropdown__list--btn">
+							<div class="refresh-btn">
+								<img src="../assets/img/refresh-icon.svg" alt="Icon">
+							</div>
+							<div class="cross-btn">
+								<img src="../assets/img/cross-icon-gray.svg" alt="Icon">
+							</div>
+						</div>
+						<div class="select-dropdown__title">Design</div>
+						<input type="radio" name="ratio" id="website">
+						<label for="website" class="select-dropdown__inner-title" data-value="1">Website</label> <br />
+						<input type="radio" name="ratio" id="mobile-app">
+						<label for="mobile-app" class="select-dropdown__inner-title" data-value="2">Mobile App</label>
+						<br />
+						<input type="radio" name="ratio" id="logo">
+						<label for="logo" class="select-dropdown__inner-title" data-value="3">Logo</label> <br />
+						<input type="radio" name="ratio" id="banner">
+						<label for="banner" class="select-dropdown__inner-title" data-value="4">Banner</label> <br />
+						<input type="radio" name="ratio" id="packaging">
+						<label for="packaging" class="select-dropdown__inner-title" data-value="5">Packaging</label>
+						<br />
+					</ul>
+				</div> -->
+				<!-- <button class="select--button">Design
 					<div class="button-dropdown">
 						<div class="button-dropdown__content">
 							<div class="button-dropdown__content--btn">
@@ -274,8 +341,66 @@
 						</div>
 					</div>
 				</button>
-				<button class="select--button">Colors</button>
-				<button class="select--button">Add image</button>
+				<button class="select--button">Colors
+					<div class="button-dropdown">
+						<div class="button-dropdown__content--btn">
+							<div class="refresh-btn">
+								<img src="../assets/img/refresh-icon.svg" alt="Icon">
+							</div>
+							<div class="cross-btn">
+								<img src="../assets/img/cross-icon-gray.svg" alt="Icon">
+							</div>
+						</div>
+						<div class="button-dropdown__content">
+							<div class="button-dropdown__content--btn">
+								<div class="refresh-btn">
+									<img src="../assets/img/refresh-icon.svg" alt="Icon">
+								</div>
+								<div class="cross-btn">
+									<img src="../assets/img/cross-icon-gray.svg" alt="Icon">
+								</div>
+							</div>
+							<div class="button-dropdown__title">Colors</div>
+							<div class="button-dropdown__content--links">
+								<a href="#" class="button-dropdown__content--link">Random</a>
+								<a href="#" class="button-dropdown__content--link">Studio Lighting</a>
+								<a href="#" class="button-dropdown__content--link">Octane Render</a>
+								<a href="#" class="button-dropdown__content--link">Movie Lighting</a>
+								<a href="#" class="button-dropdown__content--link">Volume Lighting</a>
+								<a href="#" class="button-dropdown__content--link">General Lighting</a>
+								<a href="#" class="button-dropdown__content--link">Anime</a>
+							</div>
+						</div>
+					</div>
+				</button>
+				<button class="select--button">Add image
+
+					<div class="button-dropdown uplaod--image">
+						<div class="button-dropdown__content--btn">
+							<div class="refresh-btn">
+								<img src="../assets/img/refresh-icon.svg" alt="Icon">
+							</div>
+							<div class="cross-btn">
+								<img src="../assets/img/cross-icon-gray.svg" alt="Icon">
+							</div>
+						</div>
+						<div class="button-dropdown__content">
+							<div class="button-dropdown__content--btn">
+								<div class="refresh-btn">
+									<img src="../assets/img/refresh-icon.svg" alt="Icon">
+								</div>
+								<div class="cross-btn">
+									<img src="../assets/img/cross-icon-gray.svg" alt="Icon">
+								</div>
+							</div>
+							<div class="button-dropdown__title">Add Image</div>
+							<div class="button-dropdown__content--addimage">
+								<input type="text" placeholder="Upload Image or paste url">
+								<input type="submit">
+							</div>
+						</div>
+					</div>
+				</button> -->
 			</div>
 		</div>
 

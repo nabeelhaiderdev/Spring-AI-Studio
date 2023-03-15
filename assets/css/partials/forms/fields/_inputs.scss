@@ -46,7 +46,7 @@ textarea,
 
 	@include font(itc, reg);
 	font-size: 18px;
-	height: 50px;
+	height: 48px;
 	width: 100%;
 	border: 1px solid map-get($map: $base_colors, $key: input_border_color);
 	background-color: map-get($map: $base_colors, $key: input_bgcolor);
@@ -56,6 +56,7 @@ textarea,
 	margin: 0 0 20px;
 	max-width: 100%;
 	box-sizing: border-box;
+	border-radius: 50px;
 
 	@include transition(all, 0.4s, ease-in-out);
 
@@ -68,15 +69,15 @@ textarea,
 // Placeholder Style
 
 ::input-placeholder {
-	color: var(--color-primary-200);
+	color: var(--color-primary-700);
 }
 
 ::input-placeholder {
-	color: var(--color-primary-200);
+	color: var(--color-primary-700);
 }
 
 ::placeholder {
-	color: var(--color-primary-200);
+	color: var(--color-primary-700);
 }
 
 input[type="text"]:disabled {
